@@ -14,10 +14,24 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "indent": "off",
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
-    "semi": ["error", "always"],
-    "prettier/prettier": "error",
+    "linebreak-style": ["warn", "unix"],
+    "quotes": ["warn", "double"],
+    "no-multiple-empty-lines": ["warn", { "max": 4 }],
+    "react/prop-types": "off",
+    "prettier/prettier": [
+      "warn", 
+      {
+        "jsxBracketSameLine": true,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "tabWidth": 2,
+        "parser": "flow"
+      }, 
+      {
+        "usePrettierrc": false
+      }
+    ],
     "no-console": "off"
   }
 }
